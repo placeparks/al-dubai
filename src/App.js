@@ -120,7 +120,14 @@ const App = () => {
   <button
   onClick={(e) => {
     e.preventDefault();
-    setShowQRCode(!showQRCode);
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const url = 'https://wa.me//+971569524690?text=Hello%20Al%20Sila%20Dubai%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.';
+    if (isMobile) {
+      window.open(url, '_blank', 'noopener noreferrer');
+    } else {
+     setShowQRCode(!showQRCode);
+    }
+    
   }}
   className="whatsapp-icon"
 >
