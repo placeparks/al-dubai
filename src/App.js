@@ -68,7 +68,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="header">
-        <h1>Al Sila Dubai</h1>
+        <h1 className='company-name'>Al Sila Dubai</h1>
       </header>
 
       <section className="about">
